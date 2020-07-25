@@ -26,11 +26,11 @@ services:
 
   product:
     build:
-      context: ../product_service/
+      context: ../backend-product_service/
     ports:
       - 8081:5000
     volumes:
-      - ../product_service/app:/app
+      - ../backend-product_service/app:/app
       - product-node-modules:/app/node_modules
     links:
       - product_db
@@ -53,11 +53,11 @@ services:
 
   user:
     build:
-      context: ../user_service/
+      context: ../backend-user_service/
     ports:
       - 8082:5000
     volumes:
-      - ../user_service/app:/app
+      - ../backend-user_service/app:/app
       - user-node-modules:/app/node_modules
     depends_on:
       - user_db
@@ -79,11 +79,11 @@ services:
 
   order:
     build:
-      context: ../order_service/
+      context: ../backend-order_service/
     ports:
       - 8083:5000
     volumes:
-      - ../order_service/app:/app
+      - ../backend-order_service/app:/app
       - order-node-modules:/app/node_modules
     depends_on:
       - order_db

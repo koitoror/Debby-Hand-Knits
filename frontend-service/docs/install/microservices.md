@@ -17,16 +17,16 @@ You should have the following project structure:
 
 ```
 ~/code/
-    - frontend/
-    - user_service/
-    - product_service/
-    - order_service/
+    - frontend_service/
+    - backend-user_service/
+    - backend-product_service/
+    - backend-order_service/
 ```
 
 The deployment is done within the frontend.git folder
 
 ```
-$ cd frontend
+$ cd frontend_service
 ```
 
 ## Docker Machine (optional)
