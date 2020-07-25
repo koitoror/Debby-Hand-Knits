@@ -9,6 +9,7 @@ app.config.update(dict(
     SECRET_KEY="powerful secretkey",
     WTF_CSRF_SECRET_KEY="a csrf secret key",
     SQLALCHEMY_DATABASE_URI='mysql+mysqlconnector://root:test@order_db/order',
+    SQLALCHEMY_TRACK_MODIFICATIONS = False,
 ))
 
 models.init_app(app)
