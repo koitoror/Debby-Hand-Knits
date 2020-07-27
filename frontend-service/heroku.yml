@@ -1,6 +1,0 @@
-build:
-  docker:
-    web: docker-compose -f docker-compose.deploy.yml build
-run:
-    web: docker-compose -f docker-compose.deploy.yml up -d
-
