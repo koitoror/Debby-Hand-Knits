@@ -2,6 +2,7 @@ from flask import Blueprint, Flask
 from flask_login import LoginManager
 from flask_bootstrap import Bootstrap
 from frontend import frontend_blueprint
+import os
 
 app = Flask(__name__)
 
@@ -20,4 +21,6 @@ app.config.update(dict(
 
 app.register_blueprint(frontend_blueprint)
 
-app.run(debug=True, host='0.0.0.0')
+port = int(os.environ.get("PORT", 5000))
+
+app.run(debug=True, host='0.0.0.0', port=port)
