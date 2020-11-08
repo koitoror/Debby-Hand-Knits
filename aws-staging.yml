@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    image: koitoror/ecommerce-microservices-python
+    ports:
+      - 80:5000
+    environment:
+      DB_USER: dbuser
+      DB_NAME: database-1
+      DB_PASSWORD: test1234
+      DB_HOST: database-1.cxdqulelcln0.us-east-1.rds.amazonaws.com
