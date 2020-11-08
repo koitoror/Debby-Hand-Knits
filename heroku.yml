@@ -2,6 +2,6 @@ build:
   docker:
     web: frontend-service/Dockerfile
     # worker: frontend-service/Dockerfile
-run:
-    web: frontend-service/docker-compose -f frontend-service/docker-compose.deploy.yml up -d
+# run:
+#     web: docker-compose -f docker-compose.deploy.yml up -d
 
