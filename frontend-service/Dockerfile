@@ -15,3 +15,4 @@ COPY ./app /app
 
 CMD python app.py run -h 0.0.0.0
 
+# CMD ["python", "app.py", "--host", "0.0.0.0"]

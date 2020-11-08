@@ -27,7 +27,7 @@ RUN npm install
 
 COPY ./app /app
 
-EXPOSE 8083/tcp
+EXPOSE 8082/tcp
 
 CMD ["python", "app.py", "--host", "0.0.0.0"]
 
