@@ -14,38 +14,3 @@ Author: Daniel Kamar
  to use Docker's containerization technology to isolate, manage, monitor, and deploy microservices in Docker containers.
 
 
-### Technical Requirements
-
-software requirements:<br/>
-SETUP AND INSTALLATION
-This will vary on a product-by-product basis, but should be a standard PI element for ILT products. This example is relatively basic.
-
-Minimum Hardware Requirements
-For successful completion of this course, students will require the computer systems with at least the following:
-
-OS: Apple MacOS or Linux. Windows can be used but examples will be presented in a Unix based operating system
-
-Processor: Intel I3+
-
-Memory: 6GB
-
-Storage: 20GB
-
-Recommended Hardware Requirements
-For an optimal experience - use the following recommend configuration:
-
-Processor: Intel i5
-
-Memory: 16GB
-
-Storage: 20GB
-
-Software Requirements
-
-Operating system: Windows or Apple MacOS or Linux
-
-Browser: Safari/FireFox/Chrome
-
-VsCode/pyCharm Latest Version
-
-Docker version Latest Version
