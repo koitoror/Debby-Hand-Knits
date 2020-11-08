@@ -7,22 +7,22 @@ This is a a guide to install just the frontend application
 Create a Docker machine for the project
 
 ```
-$ docker-machine create degem-order-management
+$ docker-machine create debby-hand-knits
 ```
 
 Start the machine
 
 ```
-$ docker-machine start degem-order-management
+$ docker-machine start debby-hand-knits
 ```
 
 ```
-$ docker-machine start degem-order-management
+$ docker-machine start debby-hand-knits
 ```
 
 Update the shell
 
 ```
-$ docker-machine env degem-order-management
-$ eval $(docker-machine env degem-order-management)
+$ docker-machine env debby-hand-knits
+$ eval $(docker-machine env debby-hand-knits)
 ```
