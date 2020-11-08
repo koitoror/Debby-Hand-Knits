@@ -34,26 +34,26 @@ $ cd frontend_service
 Create a Docker machine for the project
 
 ```
-$ docker-machine create degem-order-management
+$ docker-machine create debby-hand-knits
 ```
 
 Start the machine
 
 ```
-$ docker-machine start degem-order-management
+$ docker-machine start debby-hand-knits
 ```
 
 Update the shell
 
 ```
-$ docker-machine env degem-order-management
-$ eval $(docker-machine env degem-order-management)
+$ docker-machine env debby-hand-knits
+$ eval $(docker-machine env debby-hand-knits)
 ```
 
 Get the IP of the machine
 
 ```
-$ docker-machine ip degem-order-management
+$ docker-machine ip debby-hand-knits
 localhost
 ```
 
