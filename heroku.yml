@@ -1,26 +1,23 @@
 ---
 
-# build:
-#   docker:
-#     web: frontend-service/Dockerfile
-    # worker: frontend-service/Dockerfile
-# run:
-#     web: docker-compose -f docker-compose.deploy.yml up -d
-
 setup:
   addons:
     - plan: heroku-postgres
-      # as: POSTGRES
       as: DATABASE
 
   config:
     APP_NAME: debby-hand-knits
+
 build:
   docker:
     web: frontend-service/Dockerfile
+#     web: frontend-service/Dockerfile
+#     worker: frontend-service/Dockerfile
+
   config:
     # NODE_ENV: production
     DATABASE_URL: $DATABASE_URL
 
 # run:
-#   web: npm start
+#     web: docker-compose -f docker-compose.deploy.yml up -d
+#     web: npm start

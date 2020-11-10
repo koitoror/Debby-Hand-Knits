@@ -83,7 +83,7 @@ f63fb7b63efb        mysql:5.7.22           "docker-entrypoint.s…"   18 hours a
 
 ## Product database
 
-To add products into the product database please follow [this guide](https://github.com/koitoror/Debby-Hand-Knits/blob/master/docs/install/install.md)
+To add products into the product database please follow [this guide](install.md)
 
 # Run the application
 
