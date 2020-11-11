@@ -36,6 +36,6 @@ run:
     add_products:
       command:
         - python app/add_products.py
-        # - docker exec -i debby-hand-knits_product_1 python app/add_products.py
+        - docker exec -i debby-hand-knits_product_1 python app/add_products.py
         image:
           products
