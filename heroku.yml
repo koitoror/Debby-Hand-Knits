@@ -31,10 +31,8 @@ build:
     PRODUCT_DB: $PRODUCT_DBc
 
 run:
-    # web: docker-compose -f docker-compose.deploy.yml up -d
-    # web: npm start
-    add_products:
-      command:
-        - python app/add_products.py
-        image:
-          products
+  # web: docker-compose -f docker-compose.deploy.yml up -d
+  # web: npm start
+  add_products: python app/add_products.py
+    image:
+      products
