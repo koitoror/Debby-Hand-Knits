@@ -1,5 +1,5 @@
 from flask import Flask, g
-
+import os
 from flask_login import LoginManager, user_loaded_from_header
 from user_api import user_api_blueprint
 from flask_swagger_ui import get_swaggerui_blueprint
@@ -13,7 +13,10 @@ login_manager.init_app(app)
 
 app.config.update(dict(
     SECRET_KEY="powerful secretkey",
-    SQLALCHEMY_DATABASE_URI='mysql+mysqlconnector://root:test@user_db/user',
+    # SQLALCHEMY_DATABASE_URI='mysql+mysqlconnector://root:test@user_db/user',
+    # SQLALCHEMY_DATABASE_URI=os.getenv(USER_DB),
+    SQLALCHEMY_DATABASE_URI = os.getenv("USER_DB")
+
     SQLALCHEMY_TRACK_MODIFICATIONS = False,
 ))
 
