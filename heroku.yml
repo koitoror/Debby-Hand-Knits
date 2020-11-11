@@ -36,8 +36,8 @@ build:
     ORDER_DB: $ORDER_DB
     PRODUCT_DB: $PRODUCT_DB
 
-  networks:
-    - order-network
+  # networks:
+  #   - order-network
 
 
 # run:
