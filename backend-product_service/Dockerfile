@@ -26,7 +26,7 @@ RUN npm install
 
 COPY ./app /app
 
-PORT=8081
+# PORT=8081
 
 EXPOSE $PORT
 # EXPOSE 8081/tcp
