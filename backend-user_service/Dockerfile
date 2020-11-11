@@ -27,7 +27,7 @@ RUN npm install
 
 COPY ./app /app
 
-PORT=8082
+# PORT=8082
 
 EXPOSE $PORT
 # EXPOSE 8082/tcp

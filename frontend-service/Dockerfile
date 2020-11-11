@@ -13,7 +13,7 @@ RUN apk add --update \
 
 COPY ./app /app
 
-PORT=8080
+# PORT=8080
 
 EXPOSE $PORT
 # EXPOSE 80/tcp
