@@ -27,7 +27,10 @@ RUN npm install
 
 COPY ./app /app
 
-EXPOSE 8083/tcp
+PORT=8083
+
+EXPOSE $PORT
+# EXPOSE 8083/tcp
 
 CMD ["python", "app.py", "--host", "0.0.0.0"]
 

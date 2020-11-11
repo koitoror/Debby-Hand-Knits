@@ -25,17 +25,9 @@ services:
     restart: always
     networks:
       - order-network
-      
-  # frontend:
-  #   build:
-  #     context: .
-  #   ports:
-  #     - 80:5000
-  #   volumes:
-  #     - ./app:/app
-  #   restart: always
-  #   networks:
-  #     - order-network
+    # restart: always
+    # networks:
+    #   - order-network
 
   product:
     build:

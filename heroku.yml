@@ -35,6 +35,7 @@ build:
     USER_DB: $USER_DB
     ORDER_DB: $ORDER_DB
     PRODUCT_DB: $PRODUCT_DB
+    PORT: :$PORT
 
   # networks:
   #   - order-network

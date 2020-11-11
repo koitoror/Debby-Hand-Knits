@@ -13,6 +13,11 @@ RUN apk add --update \
 
 COPY ./app /app
 
-CMD python app.py run -h 0.0.0.0
+PORT=8080
+
+EXPOSE $PORT
+# EXPOSE 80/tcp
+
+CMD python app.py run -h 0.0.0.0:$PORT
 
 # CMD ["python", "app.py", "--host", "0.0.0.0"]
