@@ -17,6 +17,12 @@ setup:
   config:
     APP_NAME: debby-hand-knits
 
+
+networks:
+  order-network:
+    driver: bridge
+
+
 build:
   docker:
     web: frontend-service/Dockerfile
@@ -30,6 +36,10 @@ build:
     ORDER_DB: $ORDER_DB
     PRODUCT_DB: $PRODUCT_DB
 
+  networks:
+    - order-network
+
+
 # run:
     # web: docker-compose -f docker-compose.deploy.yml up -d
     # web: npm start
@@ -38,3 +48,12 @@ build:
     #     - python app/add_products.py
     #     image:
     #       products
+
+  # # run:
+  #   web: bundle exec puma -C config/puma.rb
+  #   worker: python myworker.py
+  #   asset-syncer:
+  #     command:
+  #       - python asset-syncer.py
+  #       # Use the worker image with this process type
+  #       image: worker
