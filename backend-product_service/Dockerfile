@@ -29,3 +29,4 @@ COPY ./app /app
 EXPOSE 8081/tcp
 
 CMD ["python", "app.py", "--host", "0.0.0.0"]
+CMD ["python", "add_products.py"]
