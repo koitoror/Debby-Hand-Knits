@@ -4,15 +4,8 @@ setup:
   addons:
     - plan: heroku-postgres
       as: DATABASE
-
-  config:
-    APP_NAME: debby-hand-knits
-
-build:
-  docker:
-    web: frontend-service/Dockerfile
-    # web: frontend-service/Dockerfile
-    # worker: frontend-service/Dockerfile
+      as: HEROKU_POSTGRESQL_RED
+      as: HEROKU_POSTGRESQL_BLACK
 
   config:
     # NODE_ENV: production
@@ -20,6 +13,29 @@ build:
     ORDER_DB: $ORDER_DB
     PRODUCT_DB: $PRODUCT_DB
 
-# run:
+
+  config:
+    APP_NAME: debby-hand-knits
+
+build:
+  docker:
+    web: frontend-service/Dockerfile
+    users: backend-user_service/Dockerfile
+    products: backend-product_service/Dockerfile
+    orders: backend-order_service/Dockerfile
+
+  config:
+    # NODE_ENV: production
+    USER_DB: $USER_DB
+    ORDER_DB: $ORDER_DB
+    PRODUCT_DB: $PRODUCT_DBc
+
+run:
     # web: docker-compose -f docker-compose.deploy.yml up -d
     # web: npm start
+    add_products:
+      command:
+        - python app/add_products.py
+        # - docker exec -i debby-hand-knits_product_1 python app/add_products.py
+        image:
+          products
