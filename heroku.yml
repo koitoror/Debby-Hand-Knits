@@ -18,9 +18,9 @@ setup:
     APP_NAME: debby-hand-knits
 
 
-networks:
-  order-network:
-    driver: bridge
+# networks:
+#   order-network:
+#     driver: bridge
 
 
 build:
