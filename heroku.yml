@@ -11,13 +11,15 @@ setup:
 build:
   docker:
     web: frontend-service/Dockerfile
-#     web: frontend-service/Dockerfile
-#     worker: frontend-service/Dockerfile
+    # web: frontend-service/Dockerfile
+    # worker: frontend-service/Dockerfile
 
   config:
     # NODE_ENV: production
-    DATABASE_URL: $DATABASE_URL
+    USER_DB: $USER_DB
+    ORDER_DB: $ORDER_DB
+    PRODUCT_DB: $PRODUCT_DB
 
 # run:
-#     web: docker-compose -f docker-compose.deploy.yml up -d
-#     web: npm start
+    # web: docker-compose -f docker-compose.deploy.yml up -d
+    # web: npm start
