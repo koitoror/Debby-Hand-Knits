@@ -30,11 +30,11 @@ build:
     ORDER_DB: $ORDER_DB
     PRODUCT_DB: $PRODUCT_DBc
 
-run:
+# run:
     # web: docker-compose -f docker-compose.deploy.yml up -d
     # web: npm start
-    image:
-      command:
-        - python app/add_products.py
-        image:
-          products
+    # image:
+    #   command:
+    #     - python app/add_products.py
+    #     image:
+    #       products
