@@ -2,7 +2,7 @@
 
 setup:
   addons:
-    - plan: heroku-postgres
+    - plan: heroku-postgresql
       as: DATABASE
       as: HEROKU_POSTGRESQL_RED
       as: HEROKU_POSTGRESQL_BLACK
@@ -28,7 +28,7 @@ build:
     # NODE_ENV: production
     USER_DB: $USER_DB
     ORDER_DB: $ORDER_DB
-    PRODUCT_DB: $PRODUCT_DBc
+    PRODUCT_DB: $PRODUCT_DB
 
 # run:
     # web: docker-compose -f docker-compose.deploy.yml up -d
