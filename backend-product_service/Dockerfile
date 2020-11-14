@@ -14,7 +14,7 @@ RUN apk add --no-cache py3-setuptools
 
 RUN apk add --update \
     # py-mysqldb \
-    python-dev \
+    # python-dev \
     postgresql-dev \
     gcc \
     libc-dev \
