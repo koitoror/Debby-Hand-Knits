@@ -13,8 +13,6 @@ setup:
     ORDER_DB: $ORDER_DB
     PRODUCT_DB: $PRODUCT_DB
 
-
-  config:
     APP_NAME: debby-hand-knits
 
 
