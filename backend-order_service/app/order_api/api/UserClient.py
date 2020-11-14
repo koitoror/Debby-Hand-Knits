@@ -3,7 +3,7 @@ import requests
 user = action
 
 # host = 'user'
-host = 'http://debby-hand-knits.herokuapp.com'
+host = 'debby-hand-knits.herokuapp.com'
 
 
 class UserClient:

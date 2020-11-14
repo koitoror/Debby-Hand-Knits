@@ -13,12 +13,13 @@ login_manager.login_view = 'main.login'
 bootstrap = Bootstrap(app)
 
 # host = 'localhost'
-host = 'http://debby-hand-knits.herokuapp.com'
+host = 'debby-hand-knits.herokuapp.com'
 
 app.config.update(dict(
     SECRET_KEY="powerful secretkey",
     WTF_CSRF_SECRET_KEY="a csrf secret key",
-    PRODUCT_SERVICE=f'http://{host}:8081'
+    PRODUCT_SERVICE=f'http://{host}:5000',
+    # PRODUCT_SERVICE=f'http://{host}:8081'
 ))
 
 app.register_blueprint(frontend_blueprint)

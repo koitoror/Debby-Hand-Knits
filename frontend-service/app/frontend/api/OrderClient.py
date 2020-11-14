@@ -2,7 +2,7 @@ from flask import session
 import requests
 
 # host = 'order'
-host = 'http://debby-hand-knits.herokuapp.com'
+host = 'debby-hand-knits.herokuapp.com'
 
 
 class OrderClient:
@@ -13,7 +13,7 @@ class OrderClient:
             'Authorization': 'Basic ' + session['user_api_key']
         }
 
-        url = f'{host}:5000/api/order'
+        url = f'http://{host}:5000/api/order'
 
         response = requests.request(
             method="GET", url=url, headers=headers)
