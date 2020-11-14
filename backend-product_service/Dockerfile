@@ -8,10 +8,14 @@ WORKDIR /app
 
 RUN apk add --no-cache py3-setuptools
 
-RUN apk add --update \
-    # py-mysqldb \
+RUN apk add --install \
     build-dep \
     python-psycopg2 \
+
+RUN apk add --update \
+    # py-mysqldb \
+    # build-dep \
+    # python-psycopg2 \
     gcc \
     libc-dev \
     mariadb-dev \
