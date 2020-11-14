@@ -2,6 +2,10 @@ from flask import session
 import requests
 
 
+# host = 'user'
+host = 'http://debby-hand-knits.herokuapp.com'
+
+
 class UserClient:
 
     @staticmethod
@@ -12,8 +16,6 @@ class UserClient:
             'password': form.password.data,
         }
 
-        # host = 'user'
-        host = 'debby-hand-knits.herokuapp.com'
         url = f'{host}:5000/api/user/login'
 
         response = requests.request("POST", url=url, data=payload)
@@ -26,9 +28,7 @@ class UserClient:
     @staticmethod
     def does_exist(username):
 
-        # host = 'user'
-        host = 'debby-hand-knits.herokuapp.com'
-        url = f'{host}:5000/api/user/'+username+'/exist'
+        url = f'{host}:5000/api/user/' + username + '/exist'
 
         response = requests.request("GET", url=url)
         return response.status_code == 200
@@ -44,8 +44,6 @@ class UserClient:
             'username': form.username.data
         }
 
-        # host = 'user'
-        host = 'debby-hand-knits.herokuapp.com'
         url = f'{host}:5000/api/user/create'
 
         url = 'http://user:5000/api/user/create'
@@ -60,10 +58,9 @@ class UserClient:
             'Authorization': 'Basic ' + session['user_api_key']
         }
 
-        # host = 'user'
-        host = 'debby-hand-knits.herokuapp.com'
         url = f'{host}:5000/api/user'
 
-        response = requests.request(method="GET", url=url, headers=headers)
+        response = requests.request(
+            method="GET", url=url, headers=headers)
         user = response.json()
         return user
