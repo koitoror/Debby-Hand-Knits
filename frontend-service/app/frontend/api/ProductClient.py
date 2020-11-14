@@ -2,8 +2,8 @@ import requests
 
 # host = 'product'
 # host = 'debby-hand-knits.herokuapp.com'
-# host = '0.0.0.0'
-host = 'localhost'
+host = '0.0.0.0'
+# host = 'localhost'
 
 class ProductClient:
 
@@ -11,6 +11,7 @@ class ProductClient:
     def get_product(slug):
 
         url = f'http://{host}:5000/product/' + slug
+        print(url)
 
         response = requests.request(method="GET", url=url)
 
