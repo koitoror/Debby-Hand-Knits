@@ -1,6 +1,8 @@
 from flask import Flask
 from product_api import product_api_blueprint
 from flask_swagger_ui import get_swaggerui_blueprint
+import os
+
 import models
 
 SWAGGER_URL = '/api/docs'
