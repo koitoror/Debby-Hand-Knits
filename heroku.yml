@@ -4,13 +4,13 @@ setup:
   addons:
     - plan: heroku-postgresql
       as: DATABASE
-      as: HEROKU_POSTGRESQL_RED
-      as: HEROKU_POSTGRESQL_BLACK
+      # as: HEROKU_POSTGRESQL_RED
+      # as: HEROKU_POSTGRESQL_BLACK
 
   config:
     # NODE_ENV: production
-    USER_DB: $USER_DB
-    ORDER_DB: $ORDER_DB
+    # USER_DB: $USER_DB
+    # ORDER_DB: $ORDER_DB
     PRODUCT_DB: $PRODUCT_DB
 
     APP_NAME: debby-hand-knits
@@ -23,15 +23,16 @@ setup:
 
 build:
   docker:
-    web: frontend-service/Dockerfile
-    users: backend-user_service/Dockerfile
-    products: backend-product_service/Dockerfile
-    orders: backend-order_service/Dockerfile
+    web: backend-product_service/Dockerfile
+    # web: frontend-service/Dockerfile
+    # users: backend-user_service/Dockerfile
+    # products: backend-product_service/Dockerfile
+    # orders: backend-order_service/Dockerfile
 
   config:
     # NODE_ENV: production
-    USER_DB: $USER_DB
-    ORDER_DB: $ORDER_DB
+    # USER_DB: $USER_DB
+    # ORDER_DB: $ORDER_DB
     PRODUCT_DB: $PRODUCT_DB
     PORT: :$PORT
 
