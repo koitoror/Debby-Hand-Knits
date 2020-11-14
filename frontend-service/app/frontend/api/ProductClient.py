@@ -1,8 +1,9 @@
 import requests
 
 # host = 'product'
-host = 'debby-hand-knits.herokuapp.com'
-
+# host = 'debby-hand-knits.herokuapp.com'
+host = '0.0.0.0'
+# host = 'localhost'
 
 class ProductClient:
 
