@@ -10,6 +10,8 @@ RUN apk add --no-cache py3-setuptools
 
 RUN apk add --update \
     # py-mysqldb \
+    build-dep \
+    python-psycopg2 \
     gcc \
     libc-dev \
     mariadb-dev \
@@ -18,6 +20,8 @@ RUN apk add --update \
     && pip install --upgrade pip  \
     && pip install -r requirements.txt \
     && pip install mysqlclient \
+    && pip install psycopg2 \
+    && pip install psycopg2-binary \
     && rm -rf /var/cache/apk/*
 
 COPY ./app/package.json /app/package.json
