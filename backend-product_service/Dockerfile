@@ -36,8 +36,8 @@ COPY ./app /app
 
 # PORT=8081
 
-# EXPOSE $PORT
-EXPOSE 8081/tcp
+EXPOSE $PORT
+# EXPOSE 8081/tcp
 
 CMD ["python", "app.py", "--host", "0.0.0.0"]
 CMD ["python", "add_products.py"]
