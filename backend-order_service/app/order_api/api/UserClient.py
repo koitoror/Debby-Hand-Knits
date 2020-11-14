@@ -14,7 +14,7 @@ class UserClient:
             'Authorization': api_key
         }
 
-        url = f'{host}:5000/api/user'
+        url = f'http://{host}:5000/api/user'
         print(url)
 
         response = requests.request(
