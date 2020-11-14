@@ -15,9 +15,8 @@ app.config.update(dict(
     SECRET_KEY="powerful secretkey",
     # SQLALCHEMY_DATABASE_URI='mysql+mysqlconnector://root:test@user_db/user',
     # SQLALCHEMY_DATABASE_URI=os.getenv(USER_DB),
-    SQLALCHEMY_DATABASE_URI = os.getenv("USER_DB")
-
-    SQLALCHEMY_TRACK_MODIFICATIONS = False,
+    SQLALCHEMY_DATABASE_URI = os.getenv("USER_DB"),
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
 ))
 
 models.init_app(app)
