@@ -2,8 +2,8 @@ from flask import session
 import requests
 
 # host = 'order'
-# host = 'debby-hand-knits.herokuapp.com'
-host = '0.0.0.0:5000'
+host = 'degem-orders.herokuapp.com'
+# host = '0.0.0.0:5000'
 # host = 'localhost'
 
 class OrderClient:
@@ -15,9 +15,11 @@ class OrderClient:
         }
 
         url = f'http://{host}/api/order'
+        print(url)
 
         response = requests.request(
             method="GET", url=url, headers=headers)
+        print(response)
 
         order = response.json()
         return order
