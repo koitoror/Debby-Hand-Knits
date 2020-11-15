@@ -13,7 +13,7 @@ login_manager.login_view = 'main.login'
 bootstrap = Bootstrap(app)
 
 # host = 'localhost'
-host = 'debby-hand-knits.herokuapp.com'
+host = 'degem-products.herokuapp.com'
 # host = '0.0.0.0:5000'
 # host = 'localhost'
 
