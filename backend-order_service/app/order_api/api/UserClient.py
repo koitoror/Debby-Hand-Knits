@@ -1,6 +1,6 @@
 from flask import session
 import requests
-user = action
+# user = action
 
 # host = 'user'
 # host = 'debby-hand-knits.herokuapp.com'
