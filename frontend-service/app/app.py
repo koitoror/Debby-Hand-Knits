@@ -20,7 +20,7 @@ host = 'degem-products.herokuapp.com'
 app.config.update(dict(
     SECRET_KEY="powerful secretkey",
     WTF_CSRF_SECRET_KEY="a csrf secret key",
-    PRODUCT_SERVICE=f'http://{host}:5000',
+    PRODUCT_SERVICE=f'http://{host}',
     # PRODUCT_SERVICE=f'http://{host}:8081'
 ))
 
