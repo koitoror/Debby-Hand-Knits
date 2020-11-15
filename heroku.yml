@@ -10,8 +10,8 @@ setup:
   config:
     # NODE_ENV: production
     # USER_DB: $USER_DB
-    # ORDER_DB: $ORDER_DB
-    PRODUCT_DB: $PRODUCT_DB
+    ORDER_DB: $ORDER_DB
+    # PRODUCT_DB: $PRODUCT_DB
 
     APP_NAME: debby-hand-knits
 
@@ -23,7 +23,7 @@ setup:
 
 build:
   docker:
-    web: backend-user_service/Dockerfile
+    web: backend-order_service/Dockerfile
     # web: frontend-service/Dockerfile
     # users: backend-user_service/Dockerfile
     # products: backend-product_service/Dockerfile
@@ -32,8 +32,8 @@ build:
   config:
     # NODE_ENV: production
     # USER_DB: $USER_DB
-    # ORDER_DB: $ORDER_DB
-    PRODUCT_DB: $PRODUCT_DB
+    ORDER_DB: $ORDER_DB
+    # PRODUCT_DB: $PRODUCT_DB
     PORT: :$PORT
 
   # networks:
