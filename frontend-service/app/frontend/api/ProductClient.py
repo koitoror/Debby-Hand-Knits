@@ -1,7 +1,7 @@
 import requests
 
 # host = 'product'
-host = 'basic-django.herokuapp.com'
+host = 'degem-products.herokuapp.com'
 # host = '0.0.0.0:5000'
 # host = 'localhost'
 
