@@ -23,11 +23,11 @@ setup:
 
 build:
   docker:
-    web: backend-product_service/Dockerfile
+    web: backend-user_service/Dockerfile
     # web: frontend-service/Dockerfile
     # users: backend-user_service/Dockerfile
     # products: backend-product_service/Dockerfile
-    orders: backend-order_service/Dockerfile
+    # orders: backend-order_service/Dockerfile
 
   config:
     # NODE_ENV: production
