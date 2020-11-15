@@ -2,8 +2,9 @@ from flask import session
 import requests
 
 # host = 'order'
-host = 'debby-hand-knits.herokuapp.com'
-
+# host = 'debby-hand-knits.herokuapp.com'
+host = '0.0.0.0:5000'
+# host = 'localhost'
 
 class OrderClient:
 
@@ -13,7 +14,7 @@ class OrderClient:
             'Authorization': 'Basic ' + session['user_api_key']
         }
 
-        url = f'http://{host}:5000/api/order'
+        url = f'http://{host}/api/order'
 
         response = requests.request(
             method="GET", url=url, headers=headers)
@@ -24,7 +25,7 @@ class OrderClient:
     @staticmethod
     def update_order(items):
 
-        url = f'http://{host}:5000/api/order/update'
+        url = f'http://{host}/api/order/update'
 
         headers = {
             'Authorization': 'Basic ' + session['user_api_key']
@@ -43,7 +44,7 @@ class OrderClient:
             'qty': qty,
         }
 
-        url = f'http://{host}:5000/api/order/add-item'
+        url = f'http://{host}/api/order/add-item'
 
         headers = {
             'Authorization': 'Basic ' + session['user_api_key']
@@ -58,7 +59,7 @@ class OrderClient:
     @staticmethod
     def post_checkout():
 
-        url = f'http://{host}:5000/api/order/checkout'
+        url = f'http://{host}/api/order/checkout'
 
         headers = {
             'Authorization': 'Basic ' + session['user_api_key']

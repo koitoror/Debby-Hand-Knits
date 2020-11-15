@@ -3,7 +3,9 @@ import requests
 
 
 # host = 'user'
-host = 'debby-hand-knits.herokuapp.com'
+# host = 'debby-hand-knits.herokuapp.com'
+host = '0.0.0.0:5000'
+# host = 'localhost'
 
 
 class UserClient:
@@ -16,7 +18,7 @@ class UserClient:
             'password': form.password.data,
         }
 
-        url = f'http://{host}:5000/api/user/login'
+        url = f'http://{host}/api/user/login'
 
         response = requests.request("POST", url=url, data=payload)
         if response:
@@ -28,7 +30,7 @@ class UserClient:
     @staticmethod
     def does_exist(username):
 
-        url = f'http://{host}:5000/api/user/' + username + '/exist'
+        url = f'http://{host}/api/user/' + username + '/exist'
 
         response = requests.request("GET", url=url)
         return response.status_code == 200
@@ -44,7 +46,7 @@ class UserClient:
             'username': form.username.data
         }
 
-        url = f'http://{host}:5000/api/user/create'
+        url = f'http://{host}/api/user/create'
 
         response = requests.request("POST", url=url, data=payload)
         if response:
@@ -57,7 +59,7 @@ class UserClient:
             'Authorization': 'Basic ' + session['user_api_key']
         }
 
-        url = f'http://{host}:5000/api/user'
+        url = f'http://{host}/api/user'
 
         response = requests.request(
             method="GET", url=url, headers=headers)
