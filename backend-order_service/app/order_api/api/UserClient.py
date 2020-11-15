@@ -3,8 +3,8 @@ import requests
 # user = action
 
 # host = 'user'
-# host = 'debby-hand-knits.herokuapp.com'
-host = '0.0.0.0:5000'
+host = 'degem-users.herokuapp.com'
+# host = '0.0.0.0:5000'
 # host = 'localhost'
 
 class UserClient:
