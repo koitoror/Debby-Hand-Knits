@@ -14,6 +14,8 @@ bootstrap = Bootstrap(app)
 
 # host = 'localhost'
 host = 'debby-hand-knits.herokuapp.com'
+# host = '0.0.0.0:5000'
+# host = 'localhost'
 
 app.config.update(dict(
     SECRET_KEY="powerful secretkey",

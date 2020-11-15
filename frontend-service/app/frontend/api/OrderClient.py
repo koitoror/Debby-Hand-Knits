@@ -2,8 +2,9 @@ from flask import session
 import requests
 
 # host = 'order'
-host = 'debby-hand-knits.herokuapp.com'
-
+# host = 'debby-hand-knits.herokuapp.com'
+host = '0.0.0.0:5000'
+# host = 'localhost'
 
 class OrderClient:
 

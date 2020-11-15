@@ -4,6 +4,8 @@ user = action
 
 # host = 'user'
 host = 'debby-hand-knits.herokuapp.com'
+# host = '0.0.0.0:5000'
+# host = 'localhost'
 
 
 class UserClient:
@@ -14,7 +16,7 @@ class UserClient:
             'Authorization': api_key
         }
 
-        url = f'http://{host}:5000/api/user'
+        url = f'http://{host}/api/user'
         print(url)
 
         response = requests.request(
