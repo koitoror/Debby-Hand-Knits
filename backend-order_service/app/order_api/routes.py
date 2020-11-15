@@ -40,7 +40,7 @@ def order_add_item():
     u_id = int(user['id'])
 
     # Find open order
-    known_order = Order.query.filter_by(user_id=u_id, is_open=1).first()
+    known_order = Order.query.filter_by(user_id=u_id, is_open=bool(1)).first()
 
     if known_order is None:
         # Create the order
@@ -82,7 +82,7 @@ def order():
 
     user = response['result']
 
-    open_order = Order.query.filter_by(user_id=user['id'], is_open=1).first()
+    open_order = Order.query.filter_by(user_id=user['id'], is_open=bool(1)).first()
 
     if open_order is None:
         response = jsonify({'message': 'No order found'})
@@ -102,8 +102,8 @@ def checkout():
 
     user = response['result']
 
-    order_model = Order.query.filter_by(user_id=user['id'], is_open=1).first()
-    order_model.is_open = 0
+    order_model = Order.query.filter_by(user_id=user['id'], is_open=bool(1)).first()
+    order_model.is_open = bool(0)
 
     db.session.add(order_model)
     db.session.commit()
