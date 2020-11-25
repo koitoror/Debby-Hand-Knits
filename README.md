@@ -23,3 +23,12 @@ Author: Daniel Kamar
   * Python-Flask (Full-stack) Microservices
   * Docker
   * GKE
+
+### Terraform make commands
+```
+TF_ACTION=apply make terraform action
+
+ENV=staging make check-env
+
+ENV=prod TF_ACTION=apply make terraform action
+```
