@@ -13,7 +13,7 @@ resource "google_compute_address" "ip_address" {
 
 # NETWORK
 data "google_compute_network" "default" {
-  name = "default"
+  name = "default-us-central1"
 }
 
 # FIREWALL RULE
