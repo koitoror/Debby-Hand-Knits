@@ -75,22 +75,18 @@ push:
 
 deploy: check-env
 	$(MAKE) ssh-cmd CMD='docker-credential-gcr configure-docker'
-
 	@echo "pulling new container image..."
 	$(MAKE) ssh-cmd CMD='docker pull $(REMOTE_TAG)'
-
 	@echo "removing old container..."
 	-$(MAKE) ssh-cmd CMD='docker container stop $(CONTAINER_NAME)'
 	-$(MAKE) ssh-cmd CMD='docker container rm $(CONTAINER_NAME)'
-
 	@echo "starting new container..."
 	@$(MAKE) ssh-cmd CMD='\
 		docker run -d --name=$(CONTAINER_NAME) \
 			--restart=unless-stopped \
 			-p 80:3000 \
 			-e PORT=3000 \
-			-e \"MONGO_URI=mongodb+srv://storybooks-user-$(ENV):$(call get-secret,atlas_user_password_$(ENV))@storybooks-$(ENV).gps3l.mongodb.net//$(DB_NAME)?retryWrites=true&w=majority\" \
-			# -e \"MONGO_URI=mongodb+srv://storybooks-user-$(ENV):$(call get-secret,atlas_user_password_$(ENV))@storybooks-$(ENV).kkwmy.mongodb.net/$(DB_NAME)?retryWrites=true&w=majority\" \
+			-e \"MONGO_URI=mongodb+srv://storybooks-user-$(ENV):$(call get-secret,atlas_user_password_$(ENV))@storybooks-$(ENV)cluster0.gps3l.mongodb.net/$(DB_NAME)?retryWrites=true&w=majority\" \
 			-e GOOGLE_CLIENT_ID=$(OAUTH_CLIENT_ID) \
 			-e GOOGLE_CLIENT_SECRET=$(call get-secret,google_oauth_client_secret) \
 			$(REMOTE_TAG) \
