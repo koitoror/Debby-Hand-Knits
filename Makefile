@@ -75,6 +75,7 @@ push:
 
 deploy: check-env
 	$(MAKE) ssh-cmd CMD='docker-credential-gcr configure-docker'
+
 	@echo "pulling new container image..."
 	$(MAKE) ssh-cmd CMD='docker pull $(REMOTE_TAG)'
 
