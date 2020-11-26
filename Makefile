@@ -79,7 +79,7 @@ deploy: check-env
 	$(MAKE) ssh-cmd CMD='docker pull $(REMOTE_TAG)'
 	@echo "removing old container..."
 	-$(MAKE) ssh-cmd CMD='docker container stop $(CONTAINER_NAME)'
-	# -$(MAKE) ssh-cmd CMD='docker container rm $(CONTAINER_NAME)'
+	-$(MAKE) ssh-cmd CMD='docker container rm $(CONTAINER_NAME)'
 	@echo "starting new container..."
 	@$(MAKE) ssh-cmd CMD='\
 		docker run -d --name=$(CONTAINER_NAME) \
