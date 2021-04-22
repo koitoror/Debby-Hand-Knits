@@ -26,8 +26,8 @@ services:
     networks:
       - order-network
     # restart: always
-    # networks:
-    #   - order-network
+    networks:
+      - order-network
 
   product:
     build:

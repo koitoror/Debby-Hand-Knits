@@ -45,7 +45,7 @@ terraform-action: check-env
 
 ###
 
-SSH_STRING=palas@storybooks-vm-$(ENV)
+SSH_STRING=koitoror@storybooks-vm-$(ENV)
 OAUTH_CLIENT_ID=542106262510-8ki8hqgu7kmj2b3arjdqvcth3959kmmv.apps.googleusercontent.com
 
 GITHUB_SHA?=latest
