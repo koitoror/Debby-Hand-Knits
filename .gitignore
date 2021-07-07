@@ -34,3 +34,6 @@ storybooks/config/config.env
 node_modules
 *key.json
 .terraform/
+.vscode
+*.pyc
+__pycache__
