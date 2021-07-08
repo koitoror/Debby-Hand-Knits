@@ -49,8 +49,9 @@ SSH_STRING=koitoror@storybooks-vm-$(ENV)
 OAUTH_CLIENT_ID=542106262510-8ki8hqgu7kmj2b3arjdqvcth3959kmmv.apps.googleusercontent.com
 
 GITHUB_SHA?=latest
-LOCAL_TAG=storybooks-app:$(GITHUB_SHA)
-REMOTE_TAG=gcr.io/$(PROJECT_ID)/$(LOCAL_TAG)
+LOCAL_TAG=debby-app:$(GITHUB_SHA)
+# REMOTE_TAG=gcr.io/$(PROJECT_ID)/$(LOCAL_TAG)
+REMOTE_TAG=ghcr.io/koitoror/$(PROJECT_ID)/$(LOCAL_TAG)
 
 CONTAINER_NAME=storybooks-api
 DB_NAME=storybooks
