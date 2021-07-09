@@ -1,3 +1,6 @@
+[![CircleCI](https://circleci.com/gh/koitoror/debby-hand-knits.svg?style=svg)](https://circleci.com/gh/koitoror/debby-hand-knits)
+
+
 ## Debby-Hand-Knits
 - Cross-Platform E-Commerce App for Hand Knits Show-Casing of all demographic
 
