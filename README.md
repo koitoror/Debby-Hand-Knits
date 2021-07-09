@@ -1,5 +1,6 @@
-[![CircleCI](https://circleci.com/gh/koitoror/debby-hand-knits.svg?style=svg)](https://circleci.com/gh/koitoror/debby-hand-knits)
+<!-- [![CircleCI](https://circleci.com/gh/koitoror/Debby-Hand-Knits.svg?style=svg)](https://circleci.com/gh/koitoror/Debby-Hand-Knits) -->
 
+[![CircleCI](https://img.shields.io/circleci/build/github/koitoror/Debby-Hand-Knits?label=main&logo=circleci)](https://circleci.com/gh/koitoror/Debby-Hand-Knits/tree/main)
 
 ## Debby-Hand-Knits
 - Cross-Platform E-Commerce App for Hand Knits Show-Casing of all demographic
