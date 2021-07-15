@@ -1,4 +1,4 @@
-app_name="storybooks"
+app_name="debby-hand-knits"
 
 gcp_project_id="debby-hand-knits"
 

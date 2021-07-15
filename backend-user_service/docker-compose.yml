@@ -1,12 +1,5 @@
 version: '3'
 
-volumes:
-  user-db-data:
-
-networks:
-  user-network:
-    driver: bridge
-
 services:
   user:
     build:
@@ -22,7 +15,8 @@ services:
       - user-network
 
   user_db:
-    image: mysql:5.7.22
+    # image: mysql:5.7.22
+    image: mysql:5.7.34
     volumes:
       - user-db-data:/var/lib/mysql
     environment:
@@ -31,3 +25,10 @@ services:
     restart: always
     networks:
       - user-network
+
+volumes:
+  user-db-data:
+
+networks:
+  user-network:
+    driver: bridge

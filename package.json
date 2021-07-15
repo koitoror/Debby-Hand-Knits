@@ -2,10 +2,10 @@
   "name": "debby-hand-knits",
   "version": "1.0.0",
   "description": "App for creating public and private stories",
-  "main": "storybooks/app.js",
+  "main": "debby-hand-knits/app.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production node storybooks/app",
-    "dev": "cross-env NODE_ENV=development nodemon storybooks/app"
+    "start": "cross-env NODE_ENV=production node debby-hand-knits/app",
+    "dev": "cross-env NODE_ENV=development nodemon debby-hand-knits/app"
   },
   "author": "Daniel Kamar",
   "license": "MIT",

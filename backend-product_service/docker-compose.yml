@@ -1,8 +1,5 @@
 version: '3'
 
-volumes:
-  product-db-data:
-
 services:
   product:
     build:
@@ -15,10 +12,14 @@ services:
       - product_db
 
   product_db:
-    image: mysql:5.7.22
+    # image: mysql:5.7.22
+    image: mysql:5.7.34
     volumes:
       - product-db-data:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=test
       - MYSQL_DATABASE=product
     restart: always
+
+volumes:
+  product-db-data:

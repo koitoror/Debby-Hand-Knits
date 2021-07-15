@@ -1,17 +1,5 @@
 version: '3'
 
-volumes:
-  product-node-modules:
-  user-node-modules:
-  order-node-modules:
-  product-db-data:
-  user-db-data:
-  order-db-data:
-
-networks:
-  order-network:
-    driver: bridge
-
 services:
   frontend:
     build:
@@ -19,6 +7,7 @@ services:
       # context: .
     ports:
       - 80:5000
+      - 5000:5000
     volumes:
       - ./frontend-service/app:/app
       # - ./app:/app
@@ -46,7 +35,8 @@ services:
       - order-network
 
   product_db:
-    image: mysql:5.7.22
+    # image: mysql:5.7.22
+    image: mysql:5.7.34
     volumes:
       - product-db-data:/var/lib/mysql
     environment:
@@ -71,7 +61,8 @@ services:
       - order-network
 
   user_db:
-    image: mysql:5.7.22
+    # image: mysql:5.7.22
+    image: mysql:5.7.34
     volumes:
       - user-db-data:/var/lib/mysql
     environment:
@@ -80,7 +71,6 @@ services:
     restart: always
     networks:
       - order-network
-
 
   order:
     build:
@@ -97,7 +87,8 @@ services:
       - order-network
 
   order_db:
-    image: mysql:5.7.22
+    # image: mysql:5.7.22
+    image: mysql:5.7.34
     volumes:
       - order-db-data:/var/lib/mysql
     environment:
@@ -107,3 +98,14 @@ services:
     networks:
       - order-network
 
+volumes:
+  product-node-modules:
+  user-node-modules:
+  order-node-modules:
+  product-db-data:
+  user-db-data:
+  order-db-data:
+
+networks:
+  order-network:
+    driver: bridge

@@ -8,7 +8,7 @@ provider "google" {
 
 # IP ADDRESS
 resource "google_compute_address" "ip_address" {
-  name = "storybooks-ip-${terraform.workspace}"
+  name = "debby-hand-knits-ip-${terraform.workspace}"
 }
 
 # NETWORK

@@ -1,4 +1,5 @@
-FROM python:3.8-alpine
+FROM python:3.9-alpine
+# FROM python:3.8-alpine
 
 LABEL Daniel Kamar
 
@@ -6,7 +7,8 @@ COPY ./app/requirements.txt /app/requirements.txt
 
 WORKDIR /app
 
-RUN apk add --no-cache py3-setuptools
+RUN apk add py3-setuptools
+# RUN apk add --no-cache py3-setuptools
 
 # RUN apk add \
 #     build-dep \

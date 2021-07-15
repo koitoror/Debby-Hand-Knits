@@ -1,8 +1,5 @@
 version: '3'
 
-volumes:
-  order-db-data:
-
 services:
   order:
     build:
@@ -17,10 +14,15 @@ services:
       - order_db
 
   order_db:
-    image: mysql:5.7.22
+    # image: mysql:5.7.22
+    image: mysql:5.7.34
     volumes:
       - product-db-data:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=test
       - MYSQL_DATABASE=order
     restart: always
+
+volumes:
+  order-db-data:
+    

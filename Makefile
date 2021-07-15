@@ -45,7 +45,7 @@ terraform-action: check-env
 
 ###
 
-SSH_STRING=koitoror@storybooks-vm-$(ENV)
+SSH_STRING=koitoror@debby-hand-knits-vm-$(ENV)
 OAUTH_CLIENT_ID=542106262510-8ki8hqgu7kmj2b3arjdqvcth3959kmmv.apps.googleusercontent.com
 
 GITHUB_SHA?=latest
@@ -53,8 +53,8 @@ LOCAL_TAG=debby-app:$(GITHUB_SHA)
 # REMOTE_TAG=gcr.io/$(PROJECT_ID)/$(LOCAL_TAG)
 REMOTE_TAG=ghcr.io/koitoror/$(PROJECT_ID)/$(LOCAL_TAG)
 
-CONTAINER_NAME=storybooks-api
-DB_NAME=storybooks
+CONTAINER_NAME=debby-hand-knits-api
+DB_NAME=debby-hand-knits
 
 ssh: check-env
 	gcloud compute ssh $(SSH_STRING) \
@@ -87,7 +87,7 @@ deploy: check-env
 			--restart=unless-stopped \
 			-p 80:3000 \
 			-e PORT=3000 \
-			-e \"MONGO_URI=mongodb+srv://storybooks-user-$(ENV):$(call get-secret,atlas_user_password_$(ENV))@storybooks-$(ENV)cluster0.gps3l.mongodb.net/$(DB_NAME)?retryWrites=true&w=majority\" \
+			-e \"MONGO_URI=mongodb+srv://debby-hand-knits-user-$(ENV):$(call get-secret,atlas_user_password_$(ENV))@debby-hand-knits-$(ENV)cluster0.gps3l.mongodb.net/$(DB_NAME)?retryWrites=true&w=majority\" \
 			-e GOOGLE_CLIENT_ID=$(OAUTH_CLIENT_ID) \
 			-e GOOGLE_CLIENT_SECRET=$(call get-secret,google_oauth_client_secret) \
 			$(REMOTE_TAG) \
