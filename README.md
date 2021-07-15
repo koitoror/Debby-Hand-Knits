@@ -1,7 +1,7 @@
 <!-- [![CircleCI](https://circleci.com/gh/koitoror/Debby-Hand-Knits.svg?style=svg)](https://circleci.com/gh/koitoror/Debby-Hand-Knits) -->
 
 [![CircleCI](https://img.shields.io/circleci/build/github/koitoror/Debby-Hand-Knits?label=main&logo=circleci)](https://circleci.com/gh/koitoror/Debby-Hand-Knits/tree/main)
-
+![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/koitoror/Debby-Hand-Knits/Build%20and%20Deploy%20to%20Google%20Compute%20Engine/master?label=GH-Action%20WF&style=social)
 ## Debby-Hand-Knits
 - Cross-Platform E-Commerce App for Hand Knits Show-Casing of all demographic
 
